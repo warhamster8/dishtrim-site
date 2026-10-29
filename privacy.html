@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dishtrim — Informativa sulla privacy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 6rem;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color: #1a1a1a; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e8e6e3; background: #14130f; } a { color: #9ad0a0; } }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  .sub { color: #6b6b6b; margin: 0 0 2.5rem; font-size: .95rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  ul { padding-left: 1.15rem; }
+  li { margin: .35rem 0; }
+  code { background: rgba(127,127,127,.14); padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(127,127,127,.3);
+           color: #6b6b6b; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>Informativa sulla privacy — Dishtrim</h1>
+<p class="sub">Estensione browser per Chrome · ultimo aggiornamento: 29 ottobre 2026</p>
+
+<h2>In una riga</h2>
+<p>Dishtrim legge la pagina che stai guardando solo per mostrarti la ricetta senza contorno.
+Non abbiamo account, non usiamo analytics o pubblicità e non vendiamo dati. L'unico dato che
+lascia il tuo dispositivo è quello necessario al pagamento della versione PRO, gestito da
+ExtensionPay e Stripe.</p>
+
+<h2>Cosa viene elaborato e dove</h2>
+<ul>
+  <li><strong>Contenuto della pagina</strong>: quando apri una pagina con una ricetta, l'estensione
+      ne legge i dati strutturati (JSON-LD, microdati) e il testo, e li elabora
+      <strong>interamente nel tuo browser</strong>. Il contenuto non viene inviato a nessun server,
+      né nostro né di terzi.</li>
+  <li><strong>Ricette salvate</strong>: restano in <code>chrome.storage.local</code> sul tuo computer.
+      Non sono sincronizzate, non sono leggibili da noi e spariscono disinstallando l'estensione.</li>
+  <li><strong>Preferenze</strong> (per esempio le dosi scelte o la chiusura del paywall): stesso
+      trattamento, solo in locale.</li>
+</ul>
+
+<h2>Pagamenti (solo versione PRO)</h2>
+<p>L'acquisto della versione PRO è gestito da <strong>ExtensionPay</strong> (extensionpay.com), che a
+sua volta usa <strong>Stripe</strong> come processore di pagamento. In quel momento, e solo in quel
+momento, l'estensione comunica con <code>https://extensionpay.com</code> per:</p>
+<ul>
+  <li>verificare se l'utente ha già acquistato la licenza;</li>
+  <li>aprire la pagina di pagamento, la prova gratuita o il recupero della licenza via email.</li>
+</ul>
+<p>I dati trattati in questa fase sono l'<strong>indirizzo email</strong> fornito per la ricevuta e il
+recupero della licenza, e i <strong>dati di pagamento</strong>, che sono inseriti direttamente su
+Stripe: l'estensione non li vede e non li conserva. Titolari di quel trattamento sono ExtensionPay e
+Stripe, secondo le rispettive informative; i dati fiscali e la valuta dell'addebito sono gestiti da
+loro, che emettono anche la ricevuta.</p>
+<p>Se non acquisti la versione PRO, l'estensione non contatta ExtensionPay e resta completamente
+offline.</p>
+
+<h2>Cosa non facciamo</h2>
+<ul>
+  <li>Nessun account, nessun login, nessun profilo utente lato nostro.</li>
+  <li>Nessun analytics, nessun pixel, nessun tracciamento tra siti diversi.</li>
+  <li>Nessuna pubblicità, nessuna vendita o condivisione di dati con terzi per scopi di marketing.</li>
+  <li>Nessuna lettura delle pagine al di fuori di quella attiva in cui premi il pulsante.</li>
+</ul>
+
+<h2>Permessi richiesti e perché</h2>
+<ul>
+  <li><code>activeTab</code> — per aprire la vista pulita sulla scheda su cui stai agendo.</li>
+  <li><code>storage</code> — per salvare le ricette e le preferenze in locale.</li>
+  <li>Content script su pagine http/https — per riconoscere ed estrarre la ricetta della pagina
+      che stai guardando.</li>
+  <li><code>https://extensionpay.com/*</code> — solo per il checkout della versione PRO.</li>
+</ul>
+
+<h2>I tuoi diritti</h2>
+<p>Poiché non conserviamo dati personali sui nostri sistemi, non c'è nulla da consultare o
+cancellare da parte nostra: disinstallando l'estensione elimini tutto ciò che è salvato in locale.
+Per i dati del pagamento (email, ricevute) puoi esercitare i diritti previsti dal GDPR (accesso,
+rettifica, cancellazione, portabilità) scrivendo a ExtensionPay o a Stripe, oppure a noi e ti
+indichiamo la strada.</p>
+
+<h2>Modifiche</h2>
+<p>Se questa informativa cambia, aggiorniamo la data in cima a questa pagina. Le modifiche
+sostanziali vengono segnalate nella scheda dell'estensione sullo store.</p>
+
+<footer>
+  Contatto: <a href="mailto:grosso.andrea@gmail.com">grosso.andrea@gmail.com</a><br>
+  Dishtrim è un'estensione indipendente e non è affiliata ai siti di ricette su cui viene usata,
+  né a Chrome Web Store.
+</footer>
+
+</body>
+</html>
